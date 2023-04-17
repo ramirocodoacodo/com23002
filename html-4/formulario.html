@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Formulario</title>
+</head>
+
+<body>
+    <h3>Ejemplo de Form</h3>
+    <form action="" method="post">
+        <div>
+            <label for="fname">Nombre:</label>
+            <input id="fname" name="nombre" type="text" value="Ramiro">
+        </div>
+        <div>
+            <label for="femail">Email:</label>
+            <input id="femail" type="email" required placeholder="dasdasdas" title="Texto de ayuda...">
+        </div>
+        <!-- botones de opción -->
+        <div>
+            <input type="radio" id="curso-html" name="curso" value="HTML"><label for="curso-html">HTML</label>
+            <input type="radio" id="curso-css" name="curso" value="Curso de CSS"><label for="curso-css">CSS</label>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </div>
+    </form>
+</body>
+
+</html>

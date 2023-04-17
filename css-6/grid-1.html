@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px; */
+            /* grid-template-columns: 50% 50%; */
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 3fr 1fr 1fr;
+            grid-auto-rows: 2fr;
+
+            gap: 10px;
+            column-gap: 20px;
+        }
+        .item {
+            background-color: lightblue;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .borde {
+            border: .3rem solid black;
+        }
+
+        .fondo {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item borde fondo">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item fondo">8</div>
+        <div class="item">+</div>
+        <div class="item">+</div>
+        <div class="item">+</div>
+        <div class="item">+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* css externo */
+
+/* especificidad */
+/* tipos de selectores */
+/* selector de tipo/etiqueta/elemento */
+div {
+    /* color: red; */
+    color: aqua;
+}
+
+p {
+    border: 3px solid green;
+    color: black!important;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+/* selector de clase */
+.fondo-amarillo {
+    background-color: yellow;
+    color:yellowgreen;
+    font-size: 20px;
+}
+
+/* selector de id */
+#mi-parrafo1{
+    background-color: yellowgreen;
+    font-size: 18px;
+}

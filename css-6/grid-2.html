@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+        .box{
+            background-color: lightgray;
+            padding: 10px;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .contenedor{
+            height: 500px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 4fr 1fr;
+            grid-auto-rows: 1fr;
+            align-content: center;
+        }
+
+        .box1 {
+            grid-column: 1/span 3;
+            background-color: lightblue;
+        }
+        .box2{
+            grid-row: 2/5;
+            background-color: lightcoral;
+        }
+        .box3{
+            grid-column: 2/4;
+            grid-row: 2/4;
+            background-color: lightgreen;
+        }
+        .box4{
+            grid-column: 2/-1;
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- <div class="box">+</div> -->
+    </div>
+</body>
+</html>

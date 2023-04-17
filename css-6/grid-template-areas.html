@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+    <style>
+        /*
+        https://www.w3schools.com/css/css_grid.asp
+        
+        The grid-area Property
+        You can use the grid-area property to name grid items.
+        You can refer to the name when you set up the grid layout, by using the grid-template-areas property on the grid container.
+        */
+        .contenedor {
+            display: grid;
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            grid-template-areas:
+                'header header header header'
+                'izq    main   main   main'
+                'izq    main   main   main'
+                'publi  main   main   main'
+                'footer footer footer footer'
+            ;
+        }
+
+        .item1 {
+            grid-area: header;
+            background-color: lightblue;
+        }
+
+        .item2 {
+            grid-area: izq;
+            background-color: red;
+        }
+
+        .item3 {
+            grid-area: main;
+            background-color: green;
+        }
+
+        .item4 {
+            grid-area: footer;
+            background-color: orange;
+        }
+
+        #item5 {
+            grid-area: publi;
+            background-color: violet;
+            
+        }
+
+        .contenedor>div {
+            text-align: center;
+            /* selector con mayor especificidad que el de clase, si se activa,
+            se impone por sobre las reglas anteriores. */
+            /* background-color: lightblue; */
+        }
+
+        /* tablet */
+        @media screen and (max-width: 760px) {
+            .contenedor {
+                grid-template-areas:
+                    'header header header header'
+                    'main   main   main   main'
+                    'main   main   main   main'
+                    'izq  izq   izq   publi'
+                    'footer footer footer footer'
+                ;
+            }
+        }
+
+        /* celu */
+        @media screen and (max-width: 480px) {
+            .contenedor {
+                grid-template-areas:
+                    'header header header header'
+                    'main   main   main   main'
+                    'main   main   main   main'
+                    'izq  izq   izq   izq'
+                    'footer footer footer footer'
+                ;
+            }
+
+            #item5 {
+            /* oculto el elemento */
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item1">Encabezado</div>
+        <div class="item2">Izquierda</div>
+        <div class="item3">Principal</div>
+        <div class="item4">Footer</div>
+        <div id="item5">Publicidad</div>
+    </div>
+</body>
+
+</html>

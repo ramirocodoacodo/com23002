@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div, p, aside, h1, h2 {
+    margin: 30px 0px;
+}
+
+p {
+    color: red;
+    font-size: 130%;
+}
+
+#intro {
+    color: white;
+    background-color: violet;
+}
+
+.primer-clase {
+    font-size: xx-large;
+}
+
+.fuente {
+    font-size: 200%;
+    color: green;
+}
+
+/* selectores descendientes */
+aside p {
+    color: brown;
+    /* font-size: x-small; */
+    font-weight: bold;
+}
+
+/* selectores hijos */
+p > strong {
+    color: black;
+}
+
+footer + * {
+    font-style: italic;
+    font-weight: bold;
+}

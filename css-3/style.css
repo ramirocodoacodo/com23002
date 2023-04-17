@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    width: 80%;
+    /* height: auto; */
+    max-height: 100px;
+    /* margin: 50px;
+    margin-top: 0; */
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
+    overflow-y: scroll;
+}
+p{
+    margin: 20px 0px;
+    border: 0;
+    border-bottom: 3px red solid;
+}
+.mi-parrafo{
+    background-color: green;
+}
