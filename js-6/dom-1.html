@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+    <script>
+        function cambiarTexto(){
+            var elems = document.getElementsByClassName("ejemplo");
+            elems[0].innerHTML = "Hola!";
+        }
+    </script> 
+</head>
+<body>
+    <div class="ejemplo">Ejemplo 1</div>
+    <div class="ejemplo">Ejemplo 2</div>
+    <div class="ejemplo">Ejemplo 3</div>
+
+    <button onclick="cambiarTexto()">Cambiar el 1er texto</button>
+</body>
+</html>
