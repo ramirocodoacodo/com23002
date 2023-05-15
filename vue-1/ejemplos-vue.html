@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos con Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="ejemplo2">
+        <h2>ejemplo 2</h2>
+        <ul>
+            <li>Nombre: {{nombre}}</li>
+            <li>Apellido: {{apellido}}</li>
+            <li>Presentación: {{detalles()}}</li>
+        </ul>
+    </div>
+
+    <div id="ejemplo3">
+        <div v-html="contenidoHTML"></div>
+        <img v-bind:src="imgSrc" v-bind:alt="imgAlt" width="200">
+    </div>
+    <script>
+        const { createApp } = Vue;
+
+        const ejemplo2 = Vue.createApp({
+            data() {
+                return {
+                    nombre: "Ramiro",
+                    apellido: "Escalante Leiva",
+                    direccion: "Buenos Aires"
+                }
+            },
+            methods: {
+                detalles() {
+                    return `Soy ${this.nombre} ${this.apellido} y vivo en ${this.direccion}`;
+                }
+            }
+        }).mount('#ejemplo2');
+
+        ejemplo2.apellido = "Escalante";
+
+        const ejemplo3 = Vue.createApp({
+            data() {
+                return {
+                    contenidoHTML: /*html*/ `<div>
+                            <h2>Imagen de la web</h2>
+                        </div>`,
+                    imgSrc: "Vue.js_Logo_2.svg (1).png",
+                    imgAlt: "Imagen de Vue.js"
+                }
+            }
+        }
+        ).mount('#ejemplo3');
+    </script>
+</body>
+
+</html>
