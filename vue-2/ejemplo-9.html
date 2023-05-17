@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Ejemplo 9</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="ejemplo-9">
+        <h1>{{Titulo}}</h1>
+        <input type="text" v-model="nuevaFruta">
+        <button @click="agregarFruta">Agregar fruta</button>
+        <ul>
+            <li v-for="fruta of frutas">
+                {{fruta.cantidad}} - {{fruta.nombre}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const {createApp} = Vue;
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    Titulo: "Ejemplo 9 con Vue - v-for",
+                    frutas: [
+                        {nombre:'Pera', cantidad:0},
+                        {nombre:'Manzana', cantidad:0}                 
+                    ],
+                    nuevaFruta: ''
+                }
+            },
+            methods: {
+                agregarFruta() {
+                    this.frutas.push({nombre:this.nuevaFruta, cantidad:0});
+                    this.nuevaFruta = '';
+                },
+                otroMetodo() {
+                    
+                }
+            }
+        }).mount('#ejemplo-9')
+    </script>
+</body>
+</html>

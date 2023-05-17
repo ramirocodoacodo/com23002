@@ -69,6 +69,7 @@
             <li v-for="fruta of frutas">
                 {{fruta.cantidad}} - {{fruta.nombre}}
                 <button @click=fruta.cantidad++>+</button>
+                <button @click=fruta.cantidad-->-</button>
                 <span v-if="fruta.cantidad===0"> - Sin Stock</span>
             </li>
         </ul>
